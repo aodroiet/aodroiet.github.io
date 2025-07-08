@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mooping</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffaeff 0%, #a0c1ff 25%, #43c6ac 50%, #ffe29f 75%, #ff6a88 100%);
+            animation: gradient-rotate 10s ease-in-out infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradient-rotate {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .bottom-img-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .center-img {
+            max-width: 90vw;
+            max-height: 90vh;
+            display: block;
+            border: 6px solid transparent;
+            border-radius: 24px;
+            background-clip: padding-box;
+            animation: floatX 2.5s ease-in-out infinite alternate;
+            transition: transform 0.2s;
+        }
+
+        @keyframes floatX {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(32px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bottom-img-wrapper">
+        <img src="image/mooping.png" alt="mooping" class="center-img">
+    </div>
+</body>
+
+</html>
